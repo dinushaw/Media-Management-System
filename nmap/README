@@ -1,0 +1,51 @@
+What is phpNMAP?
+---------------
+phpNMAP is a Webased front end for nmap, the worlds best network mapper/scanner.  phpNMAP was written with security in mind. It allows you to scan from any platform with a web browser and access to a server hosting phpNMAP.
+
+phpNMAP is different than other similiar projects in many ways. First and foremost security is the main goal.  Rather than using a setuid root nmap binary phpNMAP uses sudo with tight restrictions.  The use of stonger regular expressions rather than builtin weak PHP safeguards on all shell bound arguments.  Second, the intial release code is ready for public use unlike most other similiar projects.  And lastly, compatibilty with every modern browsers, including text based browsers,  adds greatly to the usefullness of this program.
+
+Future releases will gain additional admin and user controls after security testing and auditing have been completed.  
+
+WARNING WARNING WARNING
+To get the most out of nmap it must be run with root privs.
+This is an insecure practice, I take no responsibility for your box
+being rooted. You have been warned.
+
+Requirements
+------------
+*nix 
+Apache + PHP 
+nmap   The newest version of nmap can be obtained from
+       http://www.insecure.org/nmap/
+       nmap is (C) 1995-2003 by Insecure.Com LLC
+
+sudo   The latest sudo may always be gotten via anonymous ftp
+       from ftp.sudo.ws in the directory /pub/sudo/.
+
+Installation
+------------
+YOU MUST HAVE ROOT ON THE WEB SERVER YOU PLAN TO INSTALL THIS ON
+Untar the file in a apache reachable directory (ex: /home/httpd/htdocs)
+like so:
+tar xjvf phpnmapXXX.tar.bz2
+You will need to add the follwing line to your sudo config. This example assumes apache runs as user httpd (many modern installs run as user apache) and the apache servers hostname is hostname, also that the location of nmap is /usr/local/bin/nmap. Run visudo and add the following line:
+	httpd hostname=(root) NOPASSWD : /usr/bin/nmap
+
+
+It would also be a good idea to edit the configuration file config.php. You can change the default location of sudo and nmap. There are also some security options.
+
+Author
+------
+Written by LeecH
+leech@deathgrab.com
+
+Distribution
+------------
+This  program  is  free  software; you can redistribute it
+and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation; Ver­
+sion 2. 
+
+All official and current releases can be found at phpnmap.sourceforge.net 
+
+phpNMAP is (C) 2003 by dG Networks

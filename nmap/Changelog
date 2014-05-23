@@ -1,0 +1,52 @@
+May 10 2005
+-----------
+* Version 0.12
+* Updated for changes in NMAP's default install directory.
+* Updated to be more compatible with newer version of PHP
+
+July 22 2003
+------------
+* Version 0.11
+* Fix problem where browser gave timeout errors on long scans
+
+April 24 2003
+-------------
+* Added Show all packets feature
+* Start implemtation of idle/zombie scan
+* Added more nmap options to the config.php file
+
+April 21 2003
+-------------
+* Version 0.10
+* Major changes to user interface
+* Added DEBUG information
+* Added ability to scan specified port ranges
+* Added option to scan a number of random hosts
+* Added Use Decoys option
+* Added Do NOT randomize port scan option
+
+April 19 2003
+------------
+* Version 0.04
+* This release fixes a bug that prevented scaning multiple hosts
+
+April 17 2003
+------------
+* Version 0.03
+* Major changes to argument handling
+* Security fixes
+* Change from POST to GET to allow bookmarking
+* Added config file config.php
+* Now allows uppercase characters to be used in hostnames
+* Option to allow/disallow scanning of multiple hosts
+
+April 14 2003
+-------------
+* Version 0.02
+* Switched to a better regex that allow using * to scan multiple ips
+* Allow the use of - in target name
+* Minor interface changes
+
+April 13 2003
+-------------
+* Initial Release v 0.01
